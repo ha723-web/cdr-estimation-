@@ -40,18 +40,14 @@ To get the clean, bold **section headers** you want, just use **`#` or `##` with
 
 ---
 
-## ✅ Final Fix – Use This Format
-
-```markdown
 # 👁️ Cup-to-Disc Ratio Estimator for Glaucoma Detection
 
-A medical AI application to assist in **early detection of glaucoma** by calculating the **Cup-to-Disc Ratio (CDR)** from retinal fundus images.
+A medical AI application to assist in **early detection of glaucoma** by calculating the **Cup-to-Disc Ratio (CDR)** from retinal fundus images using OpenCV and Streamlit.
 
 ---
 
 ## 🗂️ Files & Folder Structure
 
-```
 
 cdr-estimator/
 ├── app.py               # Streamlit app logic
@@ -100,7 +96,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ````
 
-✅ The app will open in your browser at: [http://localhost:8501](http://localhost:8501)
+✅ The app will open in your browser at: (http://localhost:8501)
 
 ---
 
@@ -118,9 +114,7 @@ M.S. in Computer Science | Passionate about AI in Healthcare
 📫 [harshiniakunuri59@gmail.com](mailto:harshiniakunuri59@gmail.com)
 🔗 [LinkedIn](https://www.linkedin.com/in/harshini-akunuri)
 
-```
 
----
 
 
 
