@@ -1,16 +1,4 @@
-Thanks for sharing your full current content, Harshini! I'll now clean it up for you and fix:
 
-* 🔁 Duplicate headers
-* ⚠️ Incorrect code block formatting for folder structure
-* 🔧 Escaped backslashes (which are **not** needed)
-* 🧼 Unused explanation lines
-* ✅ Polished formatting for perfect GitHub rendering
-
----
-
-## ✅ Final Cleaned-Up `README.md` (Copy & Paste This)
-
-````markdown
 # 👁️ Cup-to-Disc Ratio Estimator for Glaucoma Detection
 
 A medical AI application to assist in **early detection of glaucoma** by calculating the **Cup-to-Disc Ratio (CDR)** from retinal fundus images. Built using Python, OpenCV, and Streamlit.
@@ -21,7 +9,7 @@ A medical AI application to assist in **early detection of glaucoma** by calcula
 
 ### ✅ Step-by-Step Terminal Commands
 
-```bash
+bash
 # 1. Navigate to Desktop where project folder is located
 cd ~/Desktop
 
@@ -39,7 +27,6 @@ pip install -r requirements.txt
 
 # 6. Run the Streamlit app
 streamlit run app.py
-````
 
 ✅ The app will open in your browser at: [http://localhost:8501](http://localhost:8501)
 
