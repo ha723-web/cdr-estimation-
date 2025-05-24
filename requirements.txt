@@ -1,5 +1,5 @@
-opencv-python-headless==4.5.5.64      # last wheel that never breaks on SC
-numpy==1.21.6                         # companion NumPy for that wheel
+opencv-python-headless==4.5.5.64
+numpy==1.21.6
 streamlit==1.25.0
-matplotlib==3.7.1
+matplotlib==3.5.3
 fpdf==1.7.2
