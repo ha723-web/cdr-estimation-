@@ -1,3 +1,16 @@
+Thanks for sharing your full current content, Harshini! I'll now clean it up for you and fix:
+
+* 🔁 Duplicate headers
+* ⚠️ Incorrect code block formatting for folder structure
+* 🔧 Escaped backslashes (which are **not** needed)
+* 🧼 Unused explanation lines
+* ✅ Polished formatting for perfect GitHub rendering
+
+---
+
+## ✅ Final Cleaned-Up `README.md` (Copy & Paste This)
+
+````markdown
 # 👁️ Cup-to-Disc Ratio Estimator for Glaucoma Detection
 
 A medical AI application to assist in **early detection of glaucoma** by calculating the **Cup-to-Disc Ratio (CDR)** from retinal fundus images. Built using Python, OpenCV, and Streamlit.
@@ -26,106 +39,60 @@ pip install -r requirements.txt
 
 # 6. Run the Streamlit app
 streamlit run app.py
+````
 
-
-Absolutely, Harshini! Here's your updated `README.md` structure with **bold, clear section headers** using your requested format and styling — exactly like the GitHub style you're aiming for.
-
----
-
-# 👁️ Cup-to-Disc Ratio Estimator for Glaucoma Detection
-
-A medical AI application to assist in **early detection of glaucoma** by calculating the **Cup-to-Disc Ratio (CDR)** from retinal fundus images using OpenCV and Streamlit.
+✅ The app will open in your browser at: [http://localhost:8501](http://localhost:8501)
 
 ---
 
-Thanks for the screenshot, Harshini! You're absolutely right — that section with the file/folder tree is not displaying properly on GitHub because it's **inside a regular paragraph or indented code block**, and the backslashes (`\`) are being escaped incorrectly.
-
----
-
-## ✅ Correct Way to Format the Folder Tree
-
-You must wrap the folder tree inside triple backticks (\`\`\`) with **no language name** — NOT with `markdown`, and no escaping like `\_`.
-
-### ✨ Use this exact version:
-
-```markdown
 ## 🗂️ Files & Folder Structure
 
 ```
-
 cdr-estimator/
 ├── app.py               # Streamlit app logic
-├── detect\_cup\_disc.py   # Image processing with OpenCV
-├── pdf\_report.py        # PDF generation logic
+├── detect_cup_disc.py   # Image processing with OpenCV
+├── pdf_report.py        # PDF generation logic
 ├── requirements.txt     # Python dependencies
 ├── README.md            # Project documentation
-├── retina\_images/       # (Add test images here)
+├── retina_images/       # (Add test images here)
 └── output/              # Processed images and reports
-
-```
 ```
 
 ---
-
-```markdown
-## 🗂️ Files & Folder Structure
-
-```
-
-cdr-estimator/
-├── app.py               # Streamlit app logic
-├── detect\_cup\_disc.py   # Image processing with OpenCV
-├── pdf\_report.py        # PDF generation logic
-├── requirements.txt     # Python dependencies
-├── README.md            # Project documentation
-├── retina\_images/       # (Add test images here)
-└── output/              # Processed images and reports
-
-```
-
 
 ## 🧠 What the App Does
 
-- 📤 Upload a **retinal fundus image**
-- 🔍 Detect **optic cup** and **optic disc** using Hough Circle detection (OpenCV)
-- 🧮 Calculate **Cup-to-Disc Ratio (CDR = cup / disc)**
-- 🩺 Classify based on CDR:
-  - ✅ Normal if CDR ≤ 0.6
-  - ⚠️ Risk of Glaucoma if CDR > 0.6
-- 📄 Downloadable **PDF report** with results
+* 📤 Upload a **retinal fundus image**
+* 🔍 Detect **optic cup** and **optic disc** using Hough Circle detection (OpenCV)
+* 🧮 Calculate **Cup-to-Disc Ratio (CDR = cup / disc)**
+* 🩺 Classify based on CDR:
+
+  * ✅ **Normal** if CDR ≤ 0.6
+  * ⚠️ **Risk of Glaucoma** if CDR > 0.6
+* 📄 Downloadable **PDF report** with results
 
 ---
 
 ## 🧪 Example Terminal Session (Mac Setup)
 
 ```bash
-# 1. Go to Desktop
-cd ~/Desktop
-
-# 2. Navigate into project folder
-cd cdr-estimator
-
-# 3. Create virtual environment
-python3 -m venv venv
-
-# 4. Activate virtual environment
-source venv/bin/activate
-
-# 5. Install dependencies
-pip install -r requirements.txt
-
-# 6. Run the app
-streamlit run app.py
-````
-
-✅ The app will open in your browser at: (http://localhost:8501)
+Last login: Sat May 24 01:44:02 on console
+harshiniakunuri@Mac ~ % cd ~/Desktop
+harshiniakunuri@Mac Desktop % cd cdr-estimator
+harshiniakunuri@Mac cdr-estimator % python3 -m venv venv
+harshiniakunuri@Mac cdr-estimator % source venv/bin/activate
+(venv) harshiniakunuri@Mac cdr-estimator % pip install -r requirements.txt
+(venv) harshiniakunuri@Mac cdr-estimator % streamlit run app.py
+```
 
 ---
 
 ## ⚠️ Disclaimer
 
-This tool is built for **learning, analysis, and curiosity only**.
-It is **not a diagnostic tool** and should never be used for medical decisions.
+This tool is built purely for **learning, analysis, and curiosity**.
+It is **not a certified medical tool** and should not be used for real diagnostic decisions.
+Always consult a licensed ophthalmologist for medical advice.
+The author is not responsible for any use or misuse of this tool.
 
 ---
 
@@ -135,11 +102,4 @@ It is **not a diagnostic tool** and should never be used for medical decisions.
 M.S. in Computer Science | Passionate about AI in Healthcare
 📫 [harshiniakunuri59@gmail.com](mailto:harshiniakunuri59@gmail.com)
 🔗 [LinkedIn](https://www.linkedin.com/in/harshini-akunuri)
-
-
-
-
-
-
-
 
