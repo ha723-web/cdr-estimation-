@@ -32,22 +32,26 @@ Absolutely, Harshini! Here's your updated `README.md` structure with **bold, cle
 
 ---
 
-```markdown
-
-Thanks, Harshini! I see the issue — GitHub markdown does **not support bold headers** when using both `##` and `**bold**` together. That’s why the format looks off in the preview.
-
-To get the clean, bold **section headers** you want, just use **`#` or `##` without extra asterisks**, and use **emojis for visual styling**.
-
----
-
 # 👁️ Cup-to-Disc Ratio Estimator for Glaucoma Detection
 
 A medical AI application to assist in **early detection of glaucoma** by calculating the **Cup-to-Disc Ratio (CDR)** from retinal fundus images using OpenCV and Streamlit.
 
 ---
 
+Thanks for the screenshot, Harshini! You're absolutely right — that section with the file/folder tree is not displaying properly on GitHub because it's **inside a regular paragraph or indented code block**, and the backslashes (`\`) are being escaped incorrectly.
+
+---
+
+## ✅ Correct Way to Format the Folder Tree
+
+You must wrap the folder tree inside triple backticks (\`\`\`) with **no language name** — NOT with `markdown`, and no escaping like `\_`.
+
+### ✨ Use this exact version:
+
+```markdown
 ## 🗂️ Files & Folder Structure
 
+```
 
 cdr-estimator/
 ├── app.py               # Streamlit app logic
@@ -58,9 +62,27 @@ cdr-estimator/
 ├── retina\_images/       # (Add test images here)
 └── output/              # Processed images and reports
 
-````
+```
+```
 
 ---
+
+```markdown
+## 🗂️ Files & Folder Structure
+
+```
+
+cdr-estimator/
+├── app.py               # Streamlit app logic
+├── detect\_cup\_disc.py   # Image processing with OpenCV
+├── pdf\_report.py        # PDF generation logic
+├── requirements.txt     # Python dependencies
+├── README.md            # Project documentation
+├── retina\_images/       # (Add test images here)
+└── output/              # Processed images and reports
+
+```
+
 
 ## 🧠 What the App Does
 
