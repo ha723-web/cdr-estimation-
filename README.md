@@ -5,33 +5,6 @@ A medical AI application to assist in **early detection of glaucoma** by calcula
 
 ---
 
-## 📦 Project Setup & Execution (Mac + VS Code Compatible)
-
-### ✅ Step-by-Step Terminal Commands
-
-bash
-# 1. Navigate to Desktop where project folder is located
-cd ~/Desktop
-
-# 2. Enter your project folder
-cd cdr-estimator
-
-# 3. Create a virtual environment (recommended for MacOS PEP 668 compatibility)
-python3 -m venv venv
-
-# 4. Activate the virtual environment
-source venv/bin/activate
-
-# 5. Install required Python libraries
-pip install -r requirements.txt
-
-# 6. Run the Streamlit app
-streamlit run app.py
-
-✅ The app will open in your browser at: [http://localhost:8501](http://localhost:8501)
-
----
-
 ## 🗂️ Files & Folder Structure
 
 ```
@@ -60,17 +33,19 @@ cdr-estimator/
 
 ---
 
-## 🧪 Example Terminal Session (Mac Setup)
+## 📦 Project Setup & Execution (Mac + VS Code Compatible)
 
+### ✅ Step-by-Step Terminal Commands
 ```bash
-Last login: Sat May 24 01:44:02 on console
-harshiniakunuri@Mac ~ % cd ~/Desktop
-harshiniakunuri@Mac Desktop % cd cdr-estimator
-harshiniakunuri@Mac cdr-estimator % python3 -m venv venv
-harshiniakunuri@Mac cdr-estimator % source venv/bin/activate
-(venv) harshiniakunuri@Mac cdr-estimator % pip install -r requirements.txt
-(venv) harshiniakunuri@Mac cdr-estimator % streamlit run app.py
+
+cd ~/Desktop
+cd cdr-estimator
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
 ```
+✅ The app will open in your browser at: [http://localhost:8501](http://localhost:8501)
 
 ---
 
