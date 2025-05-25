@@ -1,5 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
 from detect_cup_disc import detect_cup_disc
 from pdf_report import create_report
 import cv2
@@ -32,19 +31,22 @@ if uploaded:
     else:
         st.warning("⚠️ Could not detect both cup and disc. Try another image.")
 
-# After detecting cup, disc and calculating CDR
+import matplotlib.pyplot as plt
+
+# ⬇️ Replace this section in app.py (AFTER image processing is done)
+
+# Create side-by-side plots
 fig, axs = plt.subplots(1, 2, figsize=(12, 6))
 
-# Original image
+# Show original image
 axs[0].imshow(image_rgb)
 axs[0].set_title("Original Retinal Image")
 axs[0].axis('off')
 
-# Detected image with circles
+# Show image with detected circles
 axs[1].imshow(output_img_rgb)
 axs[1].set_title(f"CDR: {cdr:.2f} — {'Normal' if cdr <= 0.6 else 'Risk of Glaucoma'}")
 axs[1].axis('off')
 
-# Show plots in Streamlit
+# Display in Streamlit
 st.pyplot(fig)
-
