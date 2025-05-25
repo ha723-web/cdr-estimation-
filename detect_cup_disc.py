@@ -1,8 +1,13 @@
 import cv2
 import numpy as np
 
-def detect_cup_disc(image_path):
-    img = cv2.imread(image_path)
+def detect_cup_disc(image_input):
+    # Accept both file path or image array
+    if isinstance(image_input, str):
+        img = cv2.imread(image_input)
+    else:
+        img = image_input.copy()
+
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     blur = cv2.medianBlur(gray, 5)
 
@@ -25,4 +30,7 @@ def detect_cup_disc(image_path):
             color = (0, 255, 0) if radius == disc_radius else (0, 0, 255)
             cv2.circle(img, center, radius, color, 2)
 
-    return img, cdr
+        return img, cup_radius, disc_radius
+    else:
+        return img, None, None
+
