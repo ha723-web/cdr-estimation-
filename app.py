@@ -3,10 +3,6 @@ from detect_cup_disc import detect_cup_disc
 from pdf_report import create_report
 import cv2
 import os
-import matplotlib.pyplot as plt
-image = cv2.imread(file_path)
-output_img, cup_radius, disc_radius = detect_cup_disc(image)
-
 
 st.title("👁️ Cup-to-Disc Ratio Estimator")
 
@@ -18,38 +14,19 @@ if uploaded:
     with open(file_path, "wb") as f:
         f.write(uploaded.read())
 
-    # ✅ Load original image
-    image = cv2.imread(file_path)
+    processed_img, cdr = detect_cup_disc(file_path)
 
-    # ✅ Run detection
-    output_img, cup_radius, disc_radius = detect_cup_disc(image)
-    cdr = round(cup_radius / disc_radius, 2)
+    st.image(processed_img, caption="Processed Image with Cup & Disc")
 
-    # ✅ Convert for matplotlib visualization
-    image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    output_img_rgb = cv2.cvtColor(output_img, cv2.COLOR_BGR2RGB)
+    if cdr:
+        st.write(f"🔢 **CDR (Cup-to-Disc Ratio)**: `{cdr}`")
+        if cdr > 0.6:
+            st.error("⚠️ High CDR: Risk of Glaucoma!")
+        else:
+            st.success("✅ Normal CDR")
 
-    # ✅ Matplotlib side-by-side plot
-    fig, axs = plt.subplots(1, 2, figsize=(12, 6))
-    axs[0].imshow(image_rgb)
-    axs[0].set_title("Original Retinal Image")
-    axs[0].axis('off')
-
-    axs[1].imshow(output_img_rgb)
-    axs[1].set_title(f"CDR: {cdr:.2f} — {'Normal' if cdr <= 0.6 else 'Risk of Glaucoma'}")
-    axs[1].axis('off')
-
-    # ✅ Show in Streamlit
-    st.pyplot(fig)
-
-    # ✅ Display CDR and Classification
-    st.write(f"🔢 **CDR (Cup-to-Disc Ratio)**: `{cdr}`")
-    if cdr > 0.6:
-        st.error("⚠️ High CDR: Risk of Glaucoma!")
+        result = "High Risk of Glaucoma" if cdr > 0.6 else "Normal"
+        create_report(cdr, result, uploaded.name)
+        st.download_button("📄 Download PDF Report", open("output/report.pdf", "rb"), file_name="glaucoma_report.pdf")
     else:
-        st.success("✅ Normal CDR")
-
-    # ✅ Generate and allow download of report
-    result = "High Risk of Glaucoma" if cdr > 0.6 else "Normal"
-    create_report(cdr, result, uploaded.name)
-    st.download_button("📄 Download PDF Report", open("output/report.pdf", "rb"), file_name="glaucoma_report.pdf")
+        st.warning("⚠️ Could not detect both cup and disc. Try another image.")
