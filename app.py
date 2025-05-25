@@ -4,6 +4,9 @@ from pdf_report import create_report
 import cv2
 import os
 import matplotlib.pyplot as plt
+image = cv2.imread(file_path)
+output_img, cup_radius, disc_radius = detect_cup_disc(image)
+
 
 st.title("👁️ Cup-to-Disc Ratio Estimator")
 
