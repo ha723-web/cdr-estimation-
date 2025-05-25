@@ -30,7 +30,7 @@ if uploaded:
         create_report(cdr, result, uploaded.name)
         st.download_button("📄 Download PDF Report", open("output/report.pdf", "rb"), file_name="glaucoma_report.pdf")
     else:
-        st.warning("⚠️ Could not detect both cup and disc. Try another image.")import matplotlib.pyplot as plt
+        st.warning("⚠️ Could not detect both cup and disc. Try another image.")
 
 # After detecting cup, disc and calculating CDR
 fig, axs = plt.subplots(1, 2, figsize=(12, 6))
