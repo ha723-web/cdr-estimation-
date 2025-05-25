@@ -1,4 +1,5 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 from detect_cup_disc import detect_cup_disc
 from pdf_report import create_report
 import cv2
