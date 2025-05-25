@@ -29,4 +29,21 @@ if uploaded:
         create_report(cdr, result, uploaded.name)
         st.download_button("📄 Download PDF Report", open("output/report.pdf", "rb"), file_name="glaucoma_report.pdf")
     else:
-        st.warning("⚠️ Could not detect both cup and disc. Try another image.")
+        st.warning("⚠️ Could not detect both cup and disc. Try another image.")import matplotlib.pyplot as plt
+
+# After detecting cup, disc and calculating CDR
+fig, axs = plt.subplots(1, 2, figsize=(12, 6))
+
+# Original image
+axs[0].imshow(image_rgb)
+axs[0].set_title("Original Retinal Image")
+axs[0].axis('off')
+
+# Detected image with circles
+axs[1].imshow(output_img_rgb)
+axs[1].set_title(f"CDR: {cdr:.2f} — {'Normal' if cdr <= 0.6 else 'Risk of Glaucoma'}")
+axs[1].axis('off')
+
+# Show plots in Streamlit
+st.pyplot(fig)
+
