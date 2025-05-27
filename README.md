@@ -3,6 +3,7 @@
 
 A medical AI application to assist in **early detection of glaucoma** by calculating the **Cup-to-Disc Ratio (CDR)** from retinal fundus images. Built using Python, OpenCV, and Streamlit.
 
+liNK TO THE APP - https://glaucoma-cdr-checker.streamlit.app/
 ---
 
 ## 🧠 What I Learned Through This Project
